@@ -13,7 +13,7 @@
 
 #define ADMOB_ID @"ca-app-pub-6305511942273552/7596626226"
 
-@interface MenuVCViewController (){
+@interface MenuVCViewController ()<GADBannerViewDelegate>{
    
     // Main view
     __weak IBOutlet UIButton    *_btnSection60;
@@ -372,7 +372,7 @@
         
     } else {
         
-        NSLog(@"dicxxx: %d",kanjiArray.count);
+        NSLog(@"dicxxx: %lu",(unsigned long)kanjiArray.count);
         int random           = arc4random() % kanjiArray.count;
         _lblKanji.text      = kanjiArray[random];
         removedKey       = _lblKanji.text;
