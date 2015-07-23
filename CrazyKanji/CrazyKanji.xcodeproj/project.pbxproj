@@ -18,6 +18,7 @@
 		2527C97D1A71EB8F007D65C0 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2527C97C1A71EB8F007D65C0 /* StoreKit.framework */; };
 		2527C97F1A71EB98007D65C0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2527C97E1A71EB98007D65C0 /* SystemConfiguration.framework */; };
 		C63060D31B4E51C000A5A8AF /* N2List.plist in Resources */ = {isa = PBXBuildFile; fileRef = C63060D21B4E51C000A5A8AF /* N2List.plist */; };
+		C64326361B60907700874E86 /* wallpaper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C64326351B60907700874E86 /* wallpaper.jpg */; };
 		CD2B7FB1196FE20700EE59E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD2B7FB0196FE20700EE59E4 /* Foundation.framework */; };
 		CD2B7FB3196FE20700EE59E4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD2B7FB2196FE20700EE59E4 /* CoreGraphics.framework */; };
 		CD2B7FB5196FE20700EE59E4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD2B7FB4196FE20700EE59E4 /* UIKit.framework */; };
@@ -110,6 +111,7 @@
 		2527C97C1A71EB8F007D65C0 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		2527C97E1A71EB98007D65C0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C63060D21B4E51C000A5A8AF /* N2List.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = N2List.plist; sourceTree = "<group>"; };
+		C64326351B60907700874E86 /* wallpaper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wallpaper.jpg; sourceTree = "<group>"; };
 		CD2B7FAD196FE20700EE59E4 /* CrazyKanji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrazyKanji.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD2B7FB0196FE20700EE59E4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CD2B7FB2196FE20700EE59E4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -351,6 +353,7 @@
 		CD2B7FE9196FE88000EE59E4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C64326351B60907700874E86 /* wallpaper.jpg */,
 				CD6D8112197F8F2D000398E1 /* Default-568h@2x.png */,
 				CD6D810E197F72FE000398E1 /* Default.png */,
 				CD6D810F197F72FE000398E1 /* Default@2x.png */,
@@ -467,6 +470,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C64326361B60907700874E86 /* wallpaper.jpg in Resources */,
 				CD4F223C1974D6A900D6BF4A /* logo.png in Resources */,
 				CD2B7FEF196FE89900EE59E4 /* img_bt_right@2x.png in Resources */,
 				CD2B7FF0196FE89900EE59E4 /* img_bt_wrong.png in Resources */,

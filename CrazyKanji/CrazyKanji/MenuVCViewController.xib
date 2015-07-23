@@ -8,10 +8,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuVCViewController">
             <connections>
                 <outlet property="_KanjiView" destination="GFf-bh-dDg" id="pR2-wd-giF"/>
-                <outlet property="_btnPc1" destination="8Xe-Jj-kIu" id="3fO-YF-UK5"/>
+                <outlet property="_btnN23" destination="fXx-tq-Adl" id="Otb-cW-9RI"/>
+                <outlet property="_btnN45" destination="O5o-qw-Rum" id="7ZD-pP-zke"/>
                 <outlet property="_btnRight" destination="IFv-Ce-iLJ" id="Mjg-r9-P6J"/>
-                <outlet property="_btnSection60" destination="LpQ-vI-cRW" id="uG7-YT-8kH"/>
-                <outlet property="_btnSection70" destination="Fpi-Hg-5kL" id="XYc-5h-XtA"/>
+                <outlet property="_btnSection60" destination="7Oy-Lf-PHs" id="41r-px-uER"/>
+                <outlet property="_btnSection70" destination="DVP-2v-770" id="IG0-sD-GVP"/>
                 <outlet property="_btnWrong" destination="hvF-ak-otC" id="a1p-6F-t3H"/>
                 <outlet property="_gameOverView" destination="Oos-d6-fIF" id="FTy-Xi-sub"/>
                 <outlet property="_lblAmHan" destination="vt8-Bt-Az4" id="Nrl-ro-nzK"/>
@@ -28,11 +29,11 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" id="GFf-bh-dDg">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="金" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WgL-Km-bz0">
@@ -133,62 +134,29 @@
                     <color key="backgroundColor" red="0.27058823529999998" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
                 <view contentMode="scaleToFill" id="xzv-9P-yfi">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="LpQ-vI-cRW">
-                            <rect key="frame" x="71" y="340" width="178" height="35"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" name="HiraKakuProN-W6" family="Hiragino Kaku Gothic ProN" pointSize="17"/>
-                            <state key="normal" title="60 chữ cơ bản" backgroundImage="img_bt_red.png">
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <connections>
-                                <action selector="goSection60:" destination="-1" eventType="touchUpInside" id="0Fw-Ts-Vbd"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Fpi-Hg-5kL">
-                            <rect key="frame" x="71" y="280" width="178" height="35"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" name="HiraKakuProN-W6" family="Hiragino Kaku Gothic ProN" pointSize="17"/>
-                            <state key="normal" title="70 bộ" backgroundImage="img_bt_green.png">
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <connections>
-                                <action selector="goSection70:" destination="-1" eventType="touchUpInside" id="AQV-e8-ThY"/>
-                            </connections>
-                        </button>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" id="2bQ-MX-zR2">
-                            <rect key="frame" x="45" y="120" width="240" height="77"/>
+                            <rect key="frame" x="45" y="71" width="240" height="77"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="8Xe-Jj-kIu">
-                            <rect key="frame" x="71" y="400" width="178" height="35"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" name="HiraKakuProN-W6" family="Hiragino Kaku Gothic ProN" pointSize="17"/>
-                            <state key="normal" title="Hán tự phổ cập 1" backgroundImage="img_bt_gray.png">
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <connections>
-                                <action selector="goSectionPC1:" destination="-1" eventType="touchUpInside" id="1IT-Kj-Mq3"/>
-                            </connections>
-                        </button>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Best Score:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xHb-Ze-yHh">
-                            <rect key="frame" x="73" y="230" width="76" height="21"/>
+                            <rect key="frame" x="65" y="181" width="76" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
                             <color key="textColor" red="0.99602900552486184" green="0.99602900552486184" blue="0.99602900552486184" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iG3-wf-Ai0">
-                            <rect key="frame" x="176" y="232" width="88" height="21"/>
+                            <rect key="frame" x="168" y="183" width="88" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" name="Futura-CondensedExtraBold" family="Futura" pointSize="17"/>
                             <color key="textColor" red="0.98832441298342544" green="0.98832441298342544" blue="0.98832441298342544" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="© Tam Nguyen -  2014" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cfT-ly-hiU">
-                            <rect key="frame" x="69" y="542" width="193" height="21"/>
+                            <rect key="frame" x="69" y="454" width="193" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -199,27 +167,65 @@
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </view>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YkP-Pb-2yq">
-                            <rect key="frame" x="73" y="462" width="176" height="30"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7Oy-Lf-PHs">
+                            <rect key="frame" x="71" y="287" width="178" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Hán tự N2">
+                            <fontDescription key="fontDescription" name="HiraKakuProN-W6" family="Hiragino Kaku Gothic ProN" pointSize="15"/>
+                            <state key="normal" title="60 chữ cơ bản">
+                                <color key="titleColor" red="0.84313725490196079" green="0.21176470588235294" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
-                                <action selector="goN2:" destination="-1" eventType="touchUpInside" id="qLe-w9-v5G"/>
+                                <action selector="goSection60:" destination="-1" eventType="touchUpInside" id="ckZ-5z-Lge"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="O5o-qw-Rum">
+                            <rect key="frame" x="71" y="337" width="178" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="15"/>
+                            <state key="normal" title="Hán tự N5-N4">
+                                <color key="titleColor" red="0.94901960784313721" green="0.69803921568627447" blue="0.10588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="goSectionPC1:" destination="-1" eventType="touchUpInside" id="mIy-Ii-d1q"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fXx-tq-Adl">
+                            <rect key="frame" x="71" y="386" width="178" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="15"/>
+                            <state key="normal" title="Hán tự N3-N2">
+                                <color key="titleColor" red="0.92941176470588238" green="0.23137254901960785" blue="0.61960784313725492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="goN2:" destination="-1" eventType="touchUpInside" id="Ffv-qp-Y16"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="DVP-2v-770">
+                            <rect key="frame" x="71" y="235" width="178" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="15"/>
+                            <state key="normal" title="70 bộ">
+                                <color key="titleColor" red="0.14901960784313725" green="0.6470588235294118" blue="0.3411764705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="goSection70:" destination="-1" eventType="touchUpInside" id="fcn-x0-xs6"/>
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" red="0.26666666666666666" green="0.27450980392156865" blue="0.53725490196078429" alpha="1" colorSpace="deviceRGB"/>
+                    <color key="backgroundColor" red="0.28235294117647058" green="0.40392156862745099" blue="0.64313725490196072" alpha="1" colorSpace="deviceRGB"/>
                 </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="277" y="361"/>
         </view>
     </objects>
     <resources>
         <image name="img_bt_gray.png" width="146" height="39"/>
-        <image name="img_bt_green.png" width="124" height="35"/>
-        <image name="img_bt_red.png" width="124" height="35"/>
         <image name="img_bt_right.png" width="130" height="130"/>
         <image name="img_bt_wrong.png" width="130" height="130"/>
         <image name="logo.png" width="476" height="156"/>

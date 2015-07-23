@@ -20,8 +20,8 @@
     // Main view
     __weak IBOutlet UIButton    *_btnSection60;
     __weak IBOutlet UIButton    *_btnSection70;
-    __weak IBOutlet UIButton    *_btnPc1;
-    __weak IBOutlet UIButton    *_btnN5;
+    __weak IBOutlet UIButton    *_btnN45;
+    __weak IBOutlet UIButton    *_btnN23;
     __weak IBOutlet UIView      *_mainView;
     __weak IBOutlet UILabel     *_lblMainBestScore;
     
@@ -49,10 +49,12 @@
     
     
     //Dictionary
-    NSDictionary   *dict70Bo;
-    NSDictionary   *dict60Chu;
-    NSDictionary   *dictPC1;
-    NSDictionary   *dicN2;
+    NSMutableDictionary   *dict70Bo;
+    NSMutableDictionary   *dict60Chu;
+    NSMutableDictionary   *dictPC1;
+    NSMutableDictionary   *dicN2;
+    
+    NSMutableArray *dicts ;
     NSInteger       section;
     
     // Check
@@ -63,6 +65,11 @@
 
     
     BOOL _isLoadAdmob;
+    NSString *removedKey;
+    
+  
+    
+    
 }
 
 @property (weak, nonatomic) IBOutlet GADBannerView  *bannerView;
@@ -99,6 +106,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+   
     // get best score from NSUserDefault
     NSUserDefaults *prefs  = [NSUserDefaults standardUserDefaults];
 	bestScore              = [prefs integerForKey:@"bestScore"];
@@ -161,6 +169,23 @@
         
         isFail  = NO;
         
+        if (section == 1) {
+            [dict70Bo removeObjectForKey:removedKey];
+        }
+        else if (section == 2) {
+            [dict60Chu removeObjectForKey:removedKey];
+
+        }
+        else if (section == 3) {
+            [dictPC1 removeObjectForKey:removedKey];
+
+        }
+        else if (section == 4) {
+            [dicN2 removeObjectForKey:removedKey];
+
+        }
+
+        
     }
     else {
         
@@ -177,6 +202,23 @@
     if (isRight == NO) {
         
         isFail = NO;
+        
+        if (section == 1) {
+            [dict70Bo removeObjectForKey:removedKey];
+        }
+        else if (section == 2) {
+            [dict60Chu removeObjectForKey:removedKey];
+            
+        }
+        else if (section == 3) {
+            [dictPC1 removeObjectForKey:removedKey];
+            
+        }
+        else if (section == 4) {
+            [dicN2 removeObjectForKey:removedKey];
+            
+        }
+
         
     }
     else {
@@ -246,8 +288,28 @@
 
 - (void) configView {
    
+    _btnSection60.backgroundColor = [UIColor clearColor];
+    _btnSection70.backgroundColor = [UIColor clearColor];
+    _btnN45.backgroundColor       = [UIColor clearColor];
+    _btnN23.backgroundColor       = [UIColor clearColor];
     
+    _btnSection60.layer.cornerRadius = 4.0;
+    _btnSection60.layer.borderWidth  = 2.0;
+    _btnSection60.layer.borderColor  = [UIColor colorWithRed:215/255.0 green:54/255.0 blue:40/255.0 alpha:255/255.0].CGColor;
+    
+    _btnSection70.layer.cornerRadius = 4.0;
+    _btnSection70.layer.borderWidth  = 2.0;
+    _btnSection70.layer.borderColor  = [UIColor colorWithRed:38/255.0 green:165/255.0 blue:87/255.0 alpha:255/255.0].CGColor;
+
+    _btnN23.layer.cornerRadius = 4.0;
+    _btnN23.layer.borderWidth  = 2.0;
+    _btnN23.layer.borderColor  = [UIColor colorWithRed:237/255.0 green:59/255.0 blue:158/255.0 alpha:255/255.0].CGColor;
    
+    _btnN45.layer.cornerRadius = 4.0;
+    _btnN45.layer.borderWidth  = 2.0;
+    _btnN45.layer.borderColor  = [UIColor colorWithRed:242/255.0 green:178/255.0 blue:27/255.0 alpha:255/255.0].CGColor;
+
+
     
     _gameOverView.hidden              = YES;
     _gameOverView.layer.cornerRadius  = 10.0;
@@ -259,18 +321,18 @@
     _lblScore.text            = [NSString stringWithFormat:@"%ld",(long)score];
    
     NSString *plistPath       = [[NSBundle mainBundle] pathForResource:@"Data" ofType:@"plist"];
-    dict70Bo                  = [NSDictionary dictionaryWithContentsOfFile:plistPath];
+    dict70Bo                  = [NSMutableDictionary dictionaryWithContentsOfFile:plistPath];
     
     NSString *plistPath1      = [[NSBundle mainBundle] pathForResource:@"Data1" ofType:@"plist"];
-    dict60Chu                 = [NSDictionary dictionaryWithContentsOfFile:plistPath1];
+    dict60Chu                 = [NSMutableDictionary dictionaryWithContentsOfFile:plistPath1];
     
     NSString *plistPath2      = [[NSBundle mainBundle] pathForResource:@"Data2" ofType:@"plist"];
-    dictPC1                   = [NSDictionary dictionaryWithContentsOfFile:plistPath2];
+    dictPC1                   = [NSMutableDictionary dictionaryWithContentsOfFile:plistPath2];
     
     NSString *plistPath3      = [[NSBundle mainBundle] pathForResource:@"N2List" ofType:@"plist"];
-    dicN2                     = [NSDictionary dictionaryWithContentsOfFile:plistPath3];
+    dicN2                     = [NSMutableDictionary dictionaryWithContentsOfFile:plistPath3];
     
-    
+    dicts = [[NSMutableArray alloc] initWithObjects:dict70Bo,dict60Chu,dictPC1,dicN2, nil];
     
     //ADMOD
     //load ADMOB
@@ -304,48 +366,58 @@
     
     
     // random kanji
-
+    
     NSArray *kanjiArray = [dict allKeys];
-   int random           = arc4random() % kanjiArray.count;
-    _lblKanji.text      = kanjiArray[random];
-    
-    // random background Color
-    
-    CGFloat hue        = ( arc4random() % 256 / 256.0 );  //  0.0 to 1.0
-    CGFloat saturation = ( arc4random() % 128 / 256.0 ) + 0.5;  //  0.5 to 1.0, away from white
-    CGFloat brightness = ( arc4random() % 128 / 256.0 ) + 0.5;  //  0.5 to 1.0, away from black
-    UIColor *color     = [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:1];
-   
-    _KanjiView.backgroundColor = color;
-    
-    // random Am Han
-    NSArray *amhanArray = [dict allValues];
-    int random1         = arc4random()%6;
-   
-    // if right
-    if (random1 == 0  || random1 == 4 || random == 2) {
-        _lblAmHan.text = [amhanArray objectAtIndex:random];
-               isRight = YES;
-    }
-    else {
-        int random2    = arc4random()%amhanArray.count;
-        _lblAmHan.text = [amhanArray objectAtIndex:random2];
-        if(_lblAmHan.text == [amhanArray objectAtIndex:random]) {
+    if (kanjiArray.count == 0) {
+        section++;
+        [self nextScreenWithDict:dicts[section]];
+        
+    } else {
+        
+        NSLog(@"dicxxx: %d",kanjiArray.count);
+        int random           = arc4random() % kanjiArray.count;
+        _lblKanji.text      = kanjiArray[random];
+        removedKey       = _lblKanji.text;
+        
+        
+        // random background Color
+        
+        CGFloat hue        = ( arc4random() % 256 / 256.0 );  //  0.0 to 1.0
+        CGFloat saturation = ( arc4random() % 128 / 256.0 ) + 0.5;  //  0.5 to 1.0, away from white
+        CGFloat brightness = ( arc4random() % 128 / 256.0 ) + 0.5;  //  0.5 to 1.0, away from black
+        UIColor *color     = [UIColor colorWithHue:hue saturation:saturation brightness:brightness alpha:1];
+        
+        _KanjiView.backgroundColor = color;
+        
+        // random Am Han
+        NSArray *amhanArray = [dict allValues];
+        int random1         = arc4random()%6;
+        
+        // if right
+        if (random1 == 0  || random1 == 4 || random == 2) {
+            _lblAmHan.text = [amhanArray objectAtIndex:random];
             isRight = YES;
         }
         else {
-            isRight = NO;
+            int random2    = arc4random()%amhanArray.count;
+            _lblAmHan.text = [amhanArray objectAtIndex:random2];
+            if(_lblAmHan.text == [amhanArray objectAtIndex:random]) {
+                isRight = YES;
+            }
+            else {
+                isRight = NO;
+            }
+            
         }
+
         
     }
     
-    
-    
-        
-   
 }
 
 // Game over
+
+
 - (void) overGame {
    
     
