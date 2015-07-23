@@ -10,8 +10,6 @@
 #include <stdlib.h>
 #import "AFViewShaker.h"
 
-#import "GADBannerView.h"
-#import "GADRequest.h"
 
 #define ADMOB_ID @"ca-app-pub-6305511942273552/7596626226"
 
