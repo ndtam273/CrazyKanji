@@ -17,7 +17,7 @@
 		2527C97D1A71EB8F007D65C0 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2527C97C1A71EB8F007D65C0 /* StoreKit.framework */; };
 		2527C97F1A71EB98007D65C0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2527C97E1A71EB98007D65C0 /* SystemConfiguration.framework */; };
 		9E81A24F1B60CD6800FE9681 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E81A2491B60CD6800FE9681 /* GoogleMobileAds.framework */; };
-		9E81A2501B60CD6800FE9681 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9E81A24E1B60CD6800FE9681 /* README.txt */; };
+		9EF1C78B1BC355DF00B3FD9D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EF1C78A1BC355DF00B3FD9D /* LaunchScreen.xib */; settings = {ASSET_TAGS = (); }; };
 		C63060D31B4E51C000A5A8AF /* N2List.plist in Resources */ = {isa = PBXBuildFile; fileRef = C63060D21B4E51C000A5A8AF /* N2List.plist */; };
 		C64326361B60907700874E86 /* wallpaper.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C64326351B60907700874E86 /* wallpaper.jpg */; };
 		CD2B7FB1196FE20700EE59E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD2B7FB0196FE20700EE59E4 /* Foundation.framework */; };
@@ -84,10 +84,7 @@
 		2527C97C1A71EB8F007D65C0 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		2527C97E1A71EB98007D65C0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		9E81A2491B60CD6800FE9681 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
-		9E81A24B1B60CD6800FE9681 /* GADMAdNetworkAdapterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADMAdNetworkAdapterProtocol.h; sourceTree = "<group>"; };
-		9E81A24C1B60CD6800FE9681 /* GADMAdNetworkConnectorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADMAdNetworkConnectorProtocol.h; sourceTree = "<group>"; };
-		9E81A24D1B60CD6800FE9681 /* GADMEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADMEnums.h; sourceTree = "<group>"; };
-		9E81A24E1B60CD6800FE9681 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		9EF1C78A1BC355DF00B3FD9D /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		C63060D21B4E51C000A5A8AF /* N2List.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = N2List.plist; sourceTree = "<group>"; };
 		C64326351B60907700874E86 /* wallpaper.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wallpaper.jpg; sourceTree = "<group>"; };
 		CD2B7FAD196FE20700EE59E4 /* CrazyKanji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrazyKanji.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,20 +175,8 @@
 			isa = PBXGroup;
 			children = (
 				9E81A2491B60CD6800FE9681 /* GoogleMobileAds.framework */,
-				9E81A24A1B60CD6800FE9681 /* Mediation Adapters */,
 			);
 			path = GoogleMobileAdsSdkiOS;
-			sourceTree = "<group>";
-		};
-		9E81A24A1B60CD6800FE9681 /* Mediation Adapters */ = {
-			isa = PBXGroup;
-			children = (
-				9E81A24B1B60CD6800FE9681 /* GADMAdNetworkAdapterProtocol.h */,
-				9E81A24C1B60CD6800FE9681 /* GADMAdNetworkConnectorProtocol.h */,
-				9E81A24D1B60CD6800FE9681 /* GADMEnums.h */,
-				9E81A24E1B60CD6800FE9681 /* README.txt */,
-			);
-			path = "Mediation Adapters";
 			sourceTree = "<group>";
 		};
 		CD2B7FA4196FE20600EE59E4 = {
@@ -248,6 +233,7 @@
 				CD2B7FC4196FE20700EE59E4 /* CrazyKanji.xcdatamodeld */,
 				CD2B7FB9196FE20700EE59E4 /* Supporting Files */,
 				CD2B7FE9196FE88000EE59E4 /* Resources */,
+				9EF1C78A1BC355DF00B3FD9D /* LaunchScreen.xib */,
 			);
 			path = CrazyKanji;
 			sourceTree = "<group>";
@@ -367,7 +353,7 @@
 		CD2B7FA5196FE20700EE59E4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = FX;
 				TargetAttributes = {
 					CD2B7FAC196FE20700EE59E4 = {
@@ -406,6 +392,7 @@
 				CD2B7FEF196FE89900EE59E4 /* img_bt_right@2x.png in Resources */,
 				CD2B7FF0196FE89900EE59E4 /* img_bt_wrong.png in Resources */,
 				CD9B534C1973DDD700CFED40 /* img_bt_green.png in Resources */,
+				9EF1C78B1BC355DF00B3FD9D /* LaunchScreen.xib in Resources */,
 				CD2B7FBD196FE20700EE59E4 /* InfoPlist.strings in Resources */,
 				CD2B7FF1196FE89900EE59E4 /* img_bt_wrong@2x.png in Resources */,
 				CDB9F4331976B403005E5F25 /* ic_replay@2x.png in Resources */,
@@ -413,7 +400,6 @@
 				CDD3ED76197776FC00D785C2 /* Data1.plist in Resources */,
 				CD6D8113197F8F2D000398E1 /* Default-568h@2x.png in Resources */,
 				CD6D810D197F69A4000398E1 /* Icon.png in Resources */,
-				9E81A2501B60CD6800FE9681 /* README.txt in Resources */,
 				CDDFA8641978DB26002F37F5 /* Data2.plist in Resources */,
 				CDB9F4361976B4C5005E5F25 /* img_bt_gray.png in Resources */,
 				CD6D8111197F72FE000398E1 /* Default@2x.png in Resources */,
@@ -513,6 +499,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Tien Le (QG598U658S)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Tien Le (QG598U658S)";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -571,8 +558,7 @@
 		CD2B7FE0196FE20800EE59E4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon1;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -582,12 +568,13 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CrazyKanji/CrazyKanji-Prefix.pch";
 				INFOPLIST_FILE = "CrazyKanji/CrazyKanji-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/GoogleMobileAdsSdkiOS",
 				);
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fx.crazykanji;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -597,8 +584,7 @@
 		CD2B7FE1196FE20800EE59E4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon1;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -608,12 +594,13 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CrazyKanji/CrazyKanji-Prefix.pch";
 				INFOPLIST_FILE = "CrazyKanji/CrazyKanji-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/GoogleMobileAdsSdkiOS",
 				);
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fx.crazykanji;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -636,6 +623,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "CrazyKanjiTests/CrazyKanjiTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fx.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -654,6 +642,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CrazyKanji/CrazyKanji-Prefix.pch";
 				INFOPLIST_FILE = "CrazyKanjiTests/CrazyKanjiTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.fx.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;

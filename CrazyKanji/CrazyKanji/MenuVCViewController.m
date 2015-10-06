@@ -11,9 +11,10 @@
 #import "AFViewShaker.h"
 
 
-#define ADMOB_ID @"ca-app-pub-6305511942273552/7596626226"
+#define ADMOB_ID        @"ca-app-pub-6305511942273552/7596626226"
+#define ADMOB_ID_FULL   @"ca-app-pub-6305511942273552/1943780224"
 
-@interface MenuVCViewController ()<GADBannerViewDelegate>{
+@interface MenuVCViewController ()<GADBannerViewDelegate, GADInterstitialDelegate>{
    
     // Main view
     __weak IBOutlet UIButton    *_btnSection60;
@@ -71,6 +72,7 @@
 }
 
 @property (weak, nonatomic) IBOutlet GADBannerView  *bannerView;
+@property (nonatomic, strong) GADInterstitial *interstitial;
 
 // Main View Action
 
@@ -230,6 +232,14 @@
 
 // replay game
 - (IBAction)replay:(id)sender{
+    
+    //confix show Admob
+    int temp = arc4random() % 3;
+    if (temp == 0) {
+        [self showFullAD];
+    }
+    NSLog(@"Random: %d", temp);
+    
     _gameOverView.hidden = YES;
     [self.view bringSubviewToFront:_mainView];
     score                     =  0;
@@ -246,10 +256,14 @@
 
 // show gameView
 - (void)topViewshow {
+    
+    CGRect mainRect = [UIScreen mainScreen].bounds;
+    
     [UIView animateWithDuration:2.0 animations:^{
         // animation code block
         
-        _topTimeView.frame  = CGRectMake(0, 0, 320, 5);
+        
+        _topTimeView.frame  = CGRectMake(0, 0, mainRect.size.width, 5);
         
         
     } completion:^(BOOL finished) {
@@ -285,6 +299,9 @@
 // ultinity function for viewWillAppear
 
 - (void) configView {
+    
+    CGRect mainRect = [UIScreen mainScreen].bounds;
+    _topTimeView.frame = CGRectMake(-mainRect.size.width, 0, mainRect.size.width, 5);
    
     _btnSection60.backgroundColor = [UIColor clearColor];
     _btnSection70.backgroundColor = [UIColor clearColor];
@@ -342,16 +359,25 @@
     //request.testDevices                 = @[ GAD_SIMULATOR_ID];
     [self.bannerView loadRequest:request];
     
+    
+    self.interstitial = [self createAndLoadInterstitial];
+    
+    
+    
 }
 
 // show next gameView
 - (void) nextScreenWithDict:(NSDictionary*) dict {
     
+    
+    
+    
     isFail = YES;
     [_btnWrong setEnabled:YES];
     [_btnRight setEnabled:YES];
     //Animation View
-    _topTimeView.frame = CGRectMake(-320, 0, 320, 5);
+    CGRect mainRect = [UIScreen mainScreen].bounds;
+    _topTimeView.frame = CGRectMake(-mainRect.size.width, 0, mainRect.size.width, 5);
     
     
     // animation
@@ -464,5 +490,64 @@
 - (void)adView:(GADBannerView *)view didFailToReceiveAdWithError:(GADRequestError *)error
 {
 }
+
+#pragma mark - ADMOB FULL
+
+- (void) showFullAD {
+    
+    if ([self.interstitial isReady]) {
+        [self.interstitial presentFromRootViewController:self];
+    }
+}
+
+- (GADInterstitial *)createAndLoadInterstitial {
+    GADInterstitial *interstitial = [[GADInterstitial alloc] initWithAdUnitID:ADMOB_ID_FULL];
+    interstitial.delegate = self;
+    [interstitial loadRequest:[GADRequest request]];
+    return interstitial;
+}
+
+- (void)interstitialDidDismissScreen:(GADInterstitial *)interstitial {
+    NSLog(@"interstitialDidDismissScreen");
+    self.interstitial = [self createAndLoadInterstitial];
+}
+
+
+- (void)interstitialDidReceiveAd:(GADInterstitial *)ad {
+    NSLog(@"interstitialDidReceiveAd");
+    
+}
+- (void)interstitial:(GADInterstitial *)ad didFailToReceiveAdWithError:(GADRequestError *)error {
+    NSLog(@"didFailToReceiveAdWithError");
+    //self.interstitial = [self createAndLoadInterstitial];
+    
+}
+- (void)interstitialWillPresentScreen:(GADInterstitial *)ad {
+    NSLog(@"interstitialWillPresentScreen");
+    
+}
+- (void)interstitialWillDismissScreen:(GADInterstitial *)ad {
+    NSLog(@"interstitialWillDismissScreen");
+    
+}
+- (void)interstitialWillLeaveApplication:(GADInterstitial *)ad {
+    NSLog(@"interstitialWillLeaveApplication");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @end
